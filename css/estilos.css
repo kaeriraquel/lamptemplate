@@ -1,0 +1,199 @@
+/* ESTILOS GENERALES */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body{
+    background: #0d191e;
+    color: #fff;
+    font-family: 'Fredoka', sans-serif;
+}
+header{
+    width: 100%;
+	display: flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+.turnOn{ 
+    /* PARA QUE SE ALINE EL ON/OFF CON EL TEXTO EN UNA SOLA LINEA */
+    display: inline-flex;
+    
+}
+.turnOn a{
+    color: #fff;
+    font-size: 18px;
+    
+}
+.menu a{
+    font-size: 32px;
+    font-weight: 600;
+}
+.menu i{
+    color: #fff;
+    font-size: 25px;
+    
+}
+.menu a span{
+    color: #078ca0;
+}
+/* -----------------------------------------PARA CREAR EL BOTON ON OFF */
+.switch{   
+    /* en caso de que pusiera mas switch */
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.slider{
+    /* crea el contenedor del elipse */
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #dadada;
+    transition: .4s;
+    border-radius: 34px;
+
+}
+.switch input{
+    /* para que no se muestre el checkbox */
+    display: none;
+}
+.slider::before{ 
+    /* crea el circulo dentro */
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 30px;
+    left: 0;
+    bottom: 0;
+    background-color: gray;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+input:checked + .slider{
+    /* cambia el color del slider al hacer click sobre el */
+    background-color: #078ca0;
+}
+input:checked + .slider::before{
+    transform: translate(30px);
+    background-color: #dadada;
+
+}
+
+
+.contenedor{
+    display: flex;
+    justify-content: end;
+    margin-top: 10%;
+    right: -300px;
+    position: absolute;
+
+}
+::-webkit-scrollbar {
+    display: none;
+    }
+.title h1{
+ 
+    font-size: 90px;
+    font-weight: 100;
+    line-height: 80%;
+}
+.title h2{
+    font-size: 90px;
+    font-weight: 100;
+    
+}
+.title p{
+    font-size: 17px;
+    font-weight: lighter;
+}
+.boton button{
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background: #078ca0;
+    color:#fff;
+    border: none;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+.lamp{
+    position: absolute;
+    top: -250px;
+    left: 70px;
+}
+.image-light{
+    opacity: 0;
+    position: absolute;
+    top: 300px;
+    left: 180px;
+    transition: opacity 0.5s;
+
+}
+.image-light-block{
+    opacity: 1;
+    transition:  opacity 0.5s;
+}
+.image-light img{
+    height: 500px;
+    width: 500px;
+}
+
+/* linea de volumen */
+
+.volume{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 120px;
+}
+.volume .line{
+    width: 250px;
+    height: 4px;
+    background: #fff;
+    margin: 0 20px;
+    border-radius: 2px;
+}
+.line span{
+    width: 50%;
+    height: 8px;
+    margin-top: -2px;
+    border-radius: 4px;
+    background: #078ca0;
+    display: block;
+}
+
+/* contenedor vacio */
+.contenedor-vacio{
+    display: none;
+    position: absolute;
+    left: 45%;
+    top: 50%;
+}
+.fondoBody{
+    background: rgb(0, 57, 54);
+}
+.texto img{
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+.texto p{
+    font-size: 20px;
+}
